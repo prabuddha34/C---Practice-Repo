@@ -1,7 +1,17 @@
 using System;
+using System.Drawing;
 using System.Linq;
 class Program
 {
+    public  string color = "Red"; //global variable !
+    public static int maxValue = 2200;//getting the maxValue!
+
+    enum MyEnum
+    {
+        Low,
+        Medium,
+        High
+    }
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World!");
@@ -205,8 +215,33 @@ class Program
         stringVal("Praxy");
         stringVal("Homie");
         //this should be vals !
+
+        stringValCal("Home Boy",34);
+        stringValCal("Calahamn",345);
+
+        int checkVal=myvalSUM(450, 50);
+        Console.WriteLine("The sum of the vals are"+" "+checkVal);
         
+        Program obj = new Program(); //making an object
         
+
+       Console.WriteLine( obj.GetHashCode()); //hash code experiment !
+       
+       //the printing vals!
+       mySatellite();
+       //let's make some multiple objects for practice!
+       Program obj2 = new Program();
+       Program obj3 = new Program();
+       
+       //print the values!
+       Console.WriteLine(obj2.color);
+       
+       //getting the enums!
+       MyEnum enumFrReal = MyEnum.Medium; 
+       Console.WriteLine("The enum value is "+" "+enumFrReal); //printing the values!
+       
+       //kinda like a switch statements for me!
+       
     }
 
     static void printVals()
@@ -219,6 +254,23 @@ class Program
         Console.WriteLine("THE STRING IS :"+" "+s);
     }
     //get some multiple parameters on this dope !
+    public static void stringValCal(string s, int cal)
+    {
+        Console.WriteLine("THE STRING IS :"+" "+s+" "+"and the cost of this string is "+" "+cal);
+    }
+    //now use of the return statements !
+    static int myvalSUM(int a, int b)
+    {
+        return a+b;
+    }
+
+    static void mySatellite() //a sample val of it !
+    {
+       // Console.WriteLine("The sateliite color is"+" "+color);
+        Console.WriteLine("The satellite speed is "+" "+maxValue);
+        
+        
+    }
     
 }
 
